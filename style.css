@@ -1,11 +1,40 @@
 body {
-    display:flex;
-    flex-direction:vertical;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.display {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.digits {
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+}
+
+.operators {
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+}
 
 
 
