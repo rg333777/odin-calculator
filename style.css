@@ -16,10 +16,13 @@ body {
 
 .display {
     display: flex;
+    box-sizing: border-box;
     flex-direction: row;
     flex: auto;
     border: thin solid black;
     padding: 25px;
+    height: 108px;
+    width: 1074px;
 }
 
 .button-container {
