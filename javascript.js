@@ -30,7 +30,3 @@ function operate(a,b,c) {
     }
 }
 
-console.log(add(3,6));
-console.log(subtract(9,7));
-console.log(multiply(8,4));
-console.log(divide(72,8));
