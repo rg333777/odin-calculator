@@ -14,6 +14,9 @@ function divide(a,b) {
     return a / b;
 }
 
+let operand1
+let operand2
+let operator
 
 console.log(add(3,6));
 console.log(subtract(9,7));
