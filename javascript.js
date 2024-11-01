@@ -32,12 +32,17 @@ function operate(a,b,c) {
 
 const digits = document.querySelectorAll('.digit')
 const display = document.querySelector('.display')
+const operatorButton = document.querySelectorAll('.operator')
+
 digits.forEach((digit) => {
     digit.addEventListener('click', () => {
         display.textContent = display.textContent + digit.textContent
+        operand1 = parseFloat(display.textContent)
     })
 })
 
-function displayNum() {
-    
-}
+operatorButton.forEach((operatorSign) => {
+    operatorSign.addEventListener('click', () => {
+        operator = operatorSign.textContent
+    })
+})
