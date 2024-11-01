@@ -30,3 +30,14 @@ function operate(a,b,c) {
     }
 }
 
+const digits = document.querySelectorAll('.digit')
+const display = document.querySelector('.display')
+digits.forEach((digit) => {
+    digit.addEventListener('click', () => {
+        display.textContent = display.textContent + digit.textContent
+    })
+})
+
+function displayNum() {
+    
+}
