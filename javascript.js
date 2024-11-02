@@ -11,11 +11,15 @@ function multiply(a,b) {
 }
 
 function divide(a,b) {
-    return a / b;
+    if (b == 0){
+        return 'Dividing by zero is not allowed! Clear and try again'
+    } else {
+        return a / b
+    }
 }
 
-let operand1;
-let operand2;
+let runningTotal;
+let operand;
 let operator;
 
 function operate(a,b,c) {
@@ -34,25 +38,48 @@ const digits = document.querySelectorAll('.digit');
 const display = document.querySelector('.display');
 const operatorButton = document.querySelectorAll('.operator');
 const clearButton = document.querySelector('.clear')
+const equalsButton = document.querySelector('.equals')
+let displayStatus
 
 clearButton.addEventListener('click', () => {
     display.textContent = ''
+    runningTotal = undefined
+    operand = undefined
 })
 
 digits.forEach((digit) => {
     digit.addEventListener('click', () => {
+        if (displayStatus === false) {
+            display.textContent = '';
+            displayStatus = true;
+        }
         display.textContent = display.textContent + digit.textContent;
+        operand = parseFloat(display.textContent);
     })
 })
 
-operatorButton.forEach((operatorSign) => {
-    operatorSign.addEventListener('click', () => {
-        operator = operatorSign.textContent;
-        if (operand1 === undefined) {
-            operand1 = parseFloat(display.textContent)
-        } else {
-            operand2 = parseFloat(display.textContent)
+operatorButton.forEach((operatorInput) => {
+    operatorInput.addEventListener('click', () => {
+        if (runningTotal === undefined) {
+            displayStatus = false
+            runningTotal = operand;
+            operand = undefined
+            operator = operatorInput.textContent
+            console.log('the operator when runningtotal is undef is: ' + operator)
+        } else if (runningTotal !== undefined && operator !== undefined) {
+            runningTotal = operate(runningTotal, operand, operator)
+            display.textContent = runningTotal
+            operand = undefined
+            displayStatus = false
+            operator = operatorInput.textContent
         }
-
     })
+})
+
+equalsButton.addEventListener('click', () => {
+    if (runningTotal !== undefined && operand !== undefined && operator !== undefined) {
+        display.textContent = ''
+        runningTotal = operate(runningTotal, operand, operator)
+        display.textContent = parseFloat(runningTotal)
+    }
 })
