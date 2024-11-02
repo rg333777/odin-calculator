@@ -12,7 +12,8 @@ function multiply(a,b) {
 
 function divide(a,b) {
     if (b == 0){
-        return 'Dividing by zero is not allowed! Clear and try again'
+        alert('You can not divide by zero! Please clear and try again')
+        return 0
     } else {
         return a / b
     }
