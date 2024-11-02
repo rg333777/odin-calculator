@@ -12,7 +12,7 @@ function multiply(a,b) {
 
 function divide(a,b) {
     if (b == 0){
-        alert('You can not divide by zero! Please clear and try again')
+        alert('you can not divide by zero! please clear and try again')
         return 0
     } else {
         return a / b
@@ -66,7 +66,6 @@ operatorButton.forEach((operatorInput) => {
             runningTotal = operand;
             operand = undefined
             operator = operatorInput.textContent
-            console.log('the operator when runningtotal is undef is: ' + operator)
         } else if (runningTotal !== undefined && operator !== undefined) {
             runningTotal = operate(runningTotal, operand, operator)
             display.textContent = runningTotal
