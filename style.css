@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 50px;
+    background-color: lightgrey;
 }
 
 .container {
@@ -12,6 +13,7 @@ body {
     justify-content: center;
     border: 10px solid black;
     padding: 10px;
+    background-color: black;
 }
 
 .display {
@@ -23,6 +25,7 @@ body {
     padding: 25px;
     height: 108px;
     width: 1074px;
+    background-color: white;
 }
 
 .button-container {
@@ -30,8 +33,7 @@ body {
     flex-direction: column;
     gap: 10px;
     margin-top: 25px;
-    border: thin solid black;
-    padding: 5px;
+    background-color: black;
 }
 
 .digits {
@@ -42,6 +44,10 @@ body {
     padding: 20px 50px 20px 50px;
 }
 
+.digit {
+    background-color: lightblue;
+}
+
 .operators {
     display: flex;
     flex-direction: row;
@@ -49,6 +55,11 @@ body {
     gap: 50px;
     border: thin solid black;
     padding: 20px 50px 20px 50px;
+}
+
+.operator {
+    background-color: lightgreen;
+    border: thin solid lightgreen;
 }
 
 .digit,
@@ -64,10 +75,17 @@ body {
 .clear {
     display: flex;
     justify-content: center;
-    border: thin solid black;
     padding: 20px;
     padding-right: 35px;
 }
 
+.equals {
+    background-color: salmon;
+    border: thin solid salmon;
+}
 
+.clear {
+    background-color: blue;
+    border: thin solid blue;
+}
 

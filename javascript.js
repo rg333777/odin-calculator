@@ -72,6 +72,8 @@ operatorButton.forEach((operatorInput) => {
             operand = undefined
             displayStatus = false
             operator = operatorInput.textContent
+        } else if (operator == undefined) {
+            operator = operatorInput.textContent
         }
     })
 })
@@ -81,5 +83,7 @@ equalsButton.addEventListener('click', () => {
         display.textContent = ''
         runningTotal = operate(runningTotal, operand, operator)
         display.textContent = parseFloat(runningTotal)
+        operator = undefined
+        displayStatus = false
     }
 })
